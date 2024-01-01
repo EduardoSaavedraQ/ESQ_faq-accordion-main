@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /*Composition*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /*Box Model*/
+    min-height: 100vh;
+
+    /*Visual*/
+    background: hsl(275, 100%, 97%) url('../assets/images/background-pattern-mobile.svg') no-repeat;
+
+    /*Typhpgraphy*/
+    font-family: Work Sans;
+}
+
+main {
+    /*Box Model*/
+    max-width: 87vw;
+    padding: 6.5vw;
+
+    /*Visual*/
+    background: hsl(0, 0%, 100%);
+    border-radius: 8px;
+}
+
+h1,
+summary {
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    /*Composition*/
+    column-gap: 24px;
+
+    /*Typhography*/
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+h1 img {
+    width: 1.55rem;
+}
+
+details {
+    /*Box Model*/
+    padding: 5vw 0;
+
+    /*Visual*/
+    border-bottom: 1px solid hsl(275, 100%, 97%);
+}
+
+details:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+summary {
+    /*Composition*/
+    justify-content: space-between;
+    column-gap: 16px;
+
+    /*Typhography*/
+    font-weight: 600;
+    font-size: .99rem;
+}
+
+details summary::marker {
+    content: '';
+}
+
+h1,
+summary {
+    color: hsl(292, 42%, 14%);
+}
+
+p {
+    /*Box Model*/
+    padding-top: 5vw;
+
+    /*Visual*/
+    color: hsl(292, 16%, 49%);
+
+    /*Typography*/
+    font-weight: 400;
+    font-size: .87rem;
+    line-height: 1.4;
+}
