@@ -44,11 +44,12 @@ h1 {
 
     /*Typhography*/
     font-weight: 700;
-    font-size: 2rem;
+    /* font-size: 2rem; */
+    font-size: clamp(2rem, 4vw + 1rem, 3.8rem); /*Between 32px and 60.8px (normal)*/
 }
 
 h1 img {
-    width: 1.55rem;
+    width: clamp(1.55rem, 2vw + 1rem, 2.55rem); /*Between 24.8px and 40.8px (normal)*/
 }
 
 details {
