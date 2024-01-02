@@ -25,11 +25,11 @@ body {
 main {
     /*Box Model*/
     max-width: 87vw;
-    padding: 6.5vw;
+    padding: min(6.5vw, 40px);
 
     /*Visual*/
     background: hsl(0, 0%, 100%);
-    border-radius: 8px;
+    border-radius: min(2.13vw, 15px);
 }
 
 h1,
@@ -44,7 +44,6 @@ h1 {
 
     /*Typhography*/
     font-weight: 700;
-    /* font-size: 2rem; */
     font-size: clamp(2rem, 4vw + 1rem, 3.8rem); /*Between 32px and 60.8px (normal)*/
 }
 
@@ -54,7 +53,8 @@ h1 img {
 
 details {
     /*Box Model*/
-    padding: 6vw 0;
+    padding-top: min(6vw, 25px);
+    padding-bottom: min(6vw, 25px);
 
     /*Visual*/
     border-bottom: 1px solid hsl(275, 100%, 97%);
@@ -68,11 +68,11 @@ details:last-child {
 summary {
     /*Composition*/
     justify-content: space-between;
-    column-gap: 16px;
+    column-gap: 30px;
 
     /*Typhography*/
     font-weight: 600;
-    font-size: .99rem;
+    font-size: clamp(.99rem, 1vw + .75rem, 1.175rem); /*Between 15.84px and 18.8px*/
 }
 
 details summary::marker {
@@ -86,13 +86,29 @@ summary {
 
 p {
     /*Box Model*/
-    padding-top: 5vw;
+    padding-top: min(5vw, 20px);
+    max-width: 541px;
 
     /*Visual*/
     color: hsl(292, 16%, 49%);
 
     /*Typography*/
     font-weight: 400;
-    font-size: .87rem;
+    font-size: clamp(.87rem, 1vw + 0.625rem, 1.04rem); /*Between 13.92px and 16.64px*/
     line-height: 1.4;
+}
+
+@media screen and (min-width: 376px) {
+    body { 
+        background-image: url('../assets/images/background-pattern-desktop.svg');
+        background-repeat: no-repeat;
+        background-size: 100vw;
+    }
+}
+
+@media (hover: hover) {
+    summary:hover {
+        color: rgb(184, 30, 184);
+        cursor: pointer;
+    }
 }
