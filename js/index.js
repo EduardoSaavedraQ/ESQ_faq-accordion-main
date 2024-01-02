@@ -10,10 +10,21 @@ function toggleSummaryIcon(details) {
     }
 }
 
+function closeOtherDetails(targetDetails) {
+    const detailsElements = document.querySelectorAll('details');
+
+    detailsElements.forEach(e => {
+        if(e !== targetDetails) e.open = false;
+    })
+}
+
 function configureDetailsToggle() {
     const detailsElements = document.querySelectorAll('details');
 
     detailsElements.forEach(e => e.addEventListener('toggle', () => toggleSummaryIcon(e)));
+    detailsElements.forEach(e => e.addEventListener('toggle', () => {
+        if(e.open) closeOtherDetails(e);
+    }));
 }
 
 configureDetailsToggle();
