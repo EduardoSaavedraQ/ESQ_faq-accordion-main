@@ -17,6 +17,7 @@ body {
 
     /*Visual*/
     background: hsl(275, 100%, 97%) url('../assets/images/background-pattern-mobile.svg') no-repeat;
+    background-size: 100vw;
 
     /*Typhpgraphy*/
     font-family: Work Sans;
@@ -98,11 +99,9 @@ p {
     line-height: 1.4;
 }
 
-@media screen and (min-width: 376px) {
+@media screen and (min-width: 600px) {
     body { 
         background-image: url('../assets/images/background-pattern-desktop.svg');
-        background-repeat: no-repeat;
-        background-size: 100vw;
     }
 }
 
